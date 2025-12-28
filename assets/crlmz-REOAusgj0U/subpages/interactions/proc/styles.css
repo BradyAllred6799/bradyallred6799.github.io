@@ -1,0 +1,142 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #2e86de;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step {
+    padding: 40px 30px;
+}
+
+h2 {
+    color: #2e86de;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccd1d9;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+textarea:focus {
+    border-color: #2e86de;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(46, 134, 222, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2e86de;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #1b4f72;
+    outline: none;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 3px rgba(46, 134, 222, 0.3);
+}
+
+#countdownDisplay,
+#timerDisplay {
+    font-size: 60px;
+    margin-top: 30px;
+    color: #2e86de;
+    font-weight: 500;
+}
+
+#pauseTimer {
+    margin-left: 10px;
+    background-color: #e74c3c;
+}
+
+#pauseTimer:hover,
+#pauseTimer:focus {
+    background-color: #c0392b;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 20px auto;
+    }
+
+    .step {
+        padding: 30px 20px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #pauseTimer {
+        margin-left: 0;
+    }
+}

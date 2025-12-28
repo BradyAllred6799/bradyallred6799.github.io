@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Prep Planner</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Test Prep Planner</h1>
+    </header>
+    <div id="form-container">
+        <form id="prep-form">
+            <!-- Progress Bar -->
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+            <!-- Step 1: Know the Details of the Test -->
+            <div class="step" id="step-1">
+                <h2>Step 1: Know the Details of the Test</h2>
+                <div class="form-group">
+                    <label for="testName">Test Name:</label>
+                    <input type="text" name="testName" id="testName" required>
+                </div>
+                <div class="form-group">
+                    <label for="testDate">Test Date:</label>
+                    <input type="date" name="testDate" id="testDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="testTime">Test Time:</label>
+                    <input type="time" name="testTime" id="testTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="testFormat">Test Format:</label>
+                    <select name="testFormat" id="testFormat" required>
+                        <option value="">Select Format</option>
+                        <option value="Multiple Choice">Multiple Choice</option>
+                        <option value="Essay">Essay</option>
+                        <option value="Short Answer">Short Answer</option>
+                        <option value="Open-Book/Take-Home">Open-Book/Take-Home</option>
+                        <option value="Online/Proctored">Online/Proctored</option>
+                        <option value="Cumulative">Cumulative</option>
+                        <option value="Mixed">Mixed</option>
+                    </select>
+                </div>
+
+                <!-- New container for dynamic tips about each test format -->
+                <div id="format-tips" style="display: none; margin-bottom: 20px; padding: 15px; background-color: #f0f0f0; border-radius: 6px;">
+                    <!-- Will be populated by script.js when a format is selected. -->
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Duration (minutes):</label>
+                    <input type="number" name="duration" id="duration" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <select name="location" id="location" required>
+                        <option value="">Select Location</option>
+                        <option value="Classroom">Classroom</option>
+                        <option value="Online">Online</option>
+                        <option value="Testing Center">Testing Center</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="materials">Allowed Materials:</label>
+                    <input type="text" name="materials" id="materials">
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Special Instructions:</label>
+                    <textarea name="instructions" id="instructions"></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn btn-next" onclick="nextStep(1)">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Break Down the Test Content -->
+            <div class="step" id="step-2" style="display:none;">
+                <h2>Step 2: Break Down the Test Content</h2>
+                <div class="form-group">
+                    <label for="topics">List the topics or chapters to cover:</label>
+                    <textarea name="topics" id="topics" placeholder="Separate topics with commas" required></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn btn-back" onclick="prevStep(2)">Back</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep(2)">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Establish and Assign Study Techniques -->
+            <div class="step" id="step-3" style="display:none;">
+                <h2>Step 3: Assign Study Techniques</h2>
+                
+                <!-- Table of Study Techniques -->
+                <table id="techniques-table">
+                    <thead>
+                        <tr>
+                            <th>Learn About Study Techniques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#" class="technique-link" data-technique="Active Recall">Active Recall</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="technique-link" data-technique="Annotation & Summarization">Annotation & Summarization</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="technique-link" data-technique="Practice Problems & Self-Quizzing">Practice Problems & Self-Quizzing</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="technique-link" data-technique="Mind Mapping">Mind Mapping</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="technique-link" data-technique="Cornell Notes">Cornell Notes</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Technique Selection for Each Topic -->
+                <div id="techniques-container"></div>
+                <div class="button-group">
+                    <button type="button" class="btn btn-back" onclick="prevStep(3)">Back</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep(3)">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Create Goals and Schedule Study Sessions -->
+            <div class="step" id="step-4" style="display:none;">
+                <h2>Step 4: Schedule Study Sessions</h2>
+                <div id="schedule-container"></div>
+                <div class="button-group">
+                    <button type="button" class="btn btn-back" onclick="prevStep(4)">Back</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep(4)">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Calendar Integration -->
+            <div class="step" id="step-5" style="display:none;">
+                <h2>Step 5: Add to Calendar</h2>
+                <p>You can download your study schedule as an ICS file to add to your calendar.</p>
+                <div class="button-group">
+                    <button type="button" class="btn btn-download" onclick="downloadICS()">Download ICS File</button>
+                    <button type="button" class="btn btn-google" onclick="addToGoogleCalendar()">Add to Google Calendar</button>
+                    <button type="button" class="btn btn-outlook" onclick="addToOutlookCalendar()">Add to Outlook Calendar</button>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn btn-back" onclick="prevStep(5)">Back</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep(5)">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 6: Flexibility, Self-Care, and Celebration -->
+            <div class="step" id="step-6" style="display:none;">
+                <h2>Step 6: Flexibility, Self-Care, and Celebration</h2>
+                <p>Remember to take care of yourself during your study journey. Good luck on your test!</p>
+                <div class="button-group">
+                    <button type="button" class="btn btn-back" onclick="prevStep(6)">Back</button>
+                    <button type="submit" class="btn btn-finish">Finish</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal for displaying the test plan -->
+    <div id="test-plan-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="test-plan-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal for displaying Technique Explanations -->
+    <div id="technique-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeTechniqueModal()">&times;</span>
+            <div id="technique-content"></div>
+        </div>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+</body>
+</html>

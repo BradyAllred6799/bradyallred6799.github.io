@@ -1,0 +1,87 @@
+/* ===== Basic Page Styling ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f8f8f8;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== Instructions Box ===== */
+.instructions {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.instructions p {
+  margin: 0;
+}
+
+/* ===== Search Bar ===== */
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#searchInput {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+}
+#searchButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* ===== Search Results ===== */
+#searchResults {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: none; /* Hidden unless we have results */
+}
+#searchResults h2 {
+  margin-top: 0;
+}
+.search-result-item {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+  cursor: pointer;
+}
+.search-result-item:last-child {
+  border-bottom: none;
+}
+.search-result-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ===== Toggleable Solution Section ===== */
+.solution {
+  display: none;
+  margin-top: 8px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 3px solid #007BFF;
+}
+.solution p {
+  margin: 0.5em 0;
+}
+.solution a {
+  color: #007BFF;
+  text-decoration: none;
+}
+.solution a:hover {
+  text-decoration: underline;
+}

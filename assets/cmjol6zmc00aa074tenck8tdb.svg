@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432.27 432.27"><defs><style>.cls-1 {
+        fill: #300;
+      }
+
+      .cls-2 {
+        fill: #ff9a00;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        opacity: .9;
+        stroke: #041189;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }</style></defs><g id="Layer_1-2" data-name="Layer 1"><g><rect class="cls-3" x="2.5" y="2.5" width="427.27" height="427.27" rx="12" ry="12"/><g><path id="Vector" class="cls-1" d="M312.33,66.14H119.94c-29.71,0-53.8,24.09-53.8,53.8v192.4c0,29.71,24.09,53.8,53.8,53.8h192.4c29.71,0,53.8-24.09,53.8-53.8V119.94c0-29.71-24.09-53.8-53.8-53.8Z"/><path id="Vector_2" data-name="Vector 2" class="cls-2" d="M167.68,145.77h44.17l49.54,138.29h-40.46l-6.81-21.05h-51.81l-6.81,21.05h-38.8l50.98-138.29ZM203.38,230.19l-15.07-46.44-15.07,46.44h30.13Z"/><path id="Vector_3" data-name="Vector 3" class="cls-2" d="M267.31,154.85c0-9.91,7.64-16.31,19.2-16.31s18.58,6.6,18.58,16.31-7.22,16.72-18.58,16.72c-11.97,0-19.2-6.6-19.2-16.72ZM268.34,176.32h36.12v107.74h-36.12v-107.74Z"/></g></g></g></svg>

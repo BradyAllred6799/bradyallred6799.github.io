@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* General body styles */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    color: #2d3b45;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+    background-color: #7c3a78;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    color: #ffffff;
+    margin: 0;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+/* Headings */
+h1, h2 {
+    color: #2d3b45;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+p {
+    line-height: 1.6;
+}
+
+/* Labels and Textareas */
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #2d3b45;
+    font-weight: 700;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #2d3b45;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    min-height: 50px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.button-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #7c3a78;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6d3a6a;
+}
+
+button:focus, textarea:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+/* Display section */
+.display-section {
+    margin-top: 30px;
+    display: none; /* Hidden until saved */
+}
+
+.display-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Printing styles */
+@media print {
+    button {
+        display: none;
+    }
+
+    textarea {
+        display: none;
+    }
+
+    label {
+        display: none;
+    }
+
+    .display-section {
+        display: block !important;
+    }
+
+    /* Remove shadows for printing */
+    .container {
+        box-shadow: none;
+    }
+}

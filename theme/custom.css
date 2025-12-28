@@ -1,0 +1,30 @@
+/* 1. Remove the Grey Bars (Your Selectors) */
+div[style*="--color-background: #fafafa"],
+section.blocks-lesson {
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 2. Header Layout */
+.organic .page__header {
+    background-color: transparent !important;
+    background: transparent !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block-start: 0;
+}
+
+/* 3. Background Image */
+/* Ensure 'background.png' is inside the 'theme' folder */
+.page__wrapper--white {
+    background-image: url("background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* 4. Text Replacement */
+/* DELETED: The 'text:' property does not exist in CSS. 
+   Your JavaScript file handles this perfectly. */

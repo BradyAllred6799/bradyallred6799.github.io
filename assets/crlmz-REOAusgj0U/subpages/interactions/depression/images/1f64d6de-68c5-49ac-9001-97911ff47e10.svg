@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 418.36 417.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9d9a9a;
+        opacity: .76;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-23 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        fill: #f3f2f2;
+        opacity: .1;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        opacity: 0;
+      }
+
+      .cls-4 {
+        fill: #d4d3d3;
+        opacity: .33;
+      }
+
+      .cls-5 {
+        fill: #bbb9b9;
+        opacity: .52;
+      }
+
+      .cls-6 {
+        fill: #8a8787;
+        opacity: .9;
+      }
+
+      .cls-7 {
+        fill: #afadad;
+        opacity: .62;
+      }
+
+      .cls-8 {
+        fill: #979393;
+        opacity: .81;
+      }
+
+      .cls-24 {
+        isolation: isolate;
+      }
+
+      .cls-9 {
+        fill: #c8c6c6;
+        opacity: .43;
+      }
+
+      .cls-10 {
+        fill: #e6e6e6;
+        opacity: .19;
+      }
+
+      .cls-25 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-11 {
+        fill: #b5b3b3;
+        opacity: .57;
+      }
+
+      .cls-12 {
+        fill: #a9a6a6;
+        opacity: .67;
+      }
+
+      .cls-13 {
+        fill: #a3a0a0;
+        opacity: .71;
+      }
+
+      .cls-26 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-14 {
+        fill: #edecec;
+        opacity: .14;
+      }
+
+      .cls-15 {
+        fill: #908d8d;
+        opacity: .86;
+      }
+
+      .cls-16 {
+        fill: #dad9d9;
+        opacity: .29;
+      }
+
+      .cls-17 {
+        fill: #e0dfdf;
+        opacity: .24;
+      }
+
+      .cls-18 {
+        fill: #c2c0c0;
+        opacity: .48;
+      }
+
+      .cls-19 {
+        fill: #f9f9f9;
+        opacity: .05;
+      }
+
+      .cls-20 {
+        fill: #cecccc;
+        opacity: .38;
+      }
+
+      .cls-27 {
+        fill: #6d6e71;
+        font-family: ProximaNova-Bold, 'Proxima Nova';
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .cls-21 {
+        fill: #848080;
+        opacity: .95;
+      }
+
+      .cls-28 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-22 {
+        fill: #7e7a7a;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="57.74" y1="57.74" x2="291.33" y2="291.33" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".34" stop-color="#fcfcfc"/>
+      <stop offset=".59" stop-color="#f2f3f3"/>
+      <stop offset=".82" stop-color="#e2e4e4"/>
+      <stop offset="1" stop-color="#cfd1d2"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-24">
+    <g id="Layer_2">
+      <g id="Layer_1-2" data-name="Layer_1">
+        <g>
+          <g>
+            <g>
+              <circle class="cls-3" cx="250.29" cy="249.76" r="168.07" transform="translate(-26.05 29.17) rotate(-6.34)"/>
+              <circle class="cls-19" cx="246.77" cy="246.24" r="168.07" transform="translate(-20.2 22.06) rotate(-4.92)"/>
+              <circle class="cls-2" cx="243.25" cy="242.73" r="168.07" transform="translate(-14.64 15.62) rotate(-3.57)"/>
+              <circle class="cls-14" cx="239.73" cy="239.21" r="168.07" transform="translate(-9.4 9.8) rotate(-2.3)"/>
+              <circle class="cls-10" cx="236.22" cy="235.69" r="168.07" transform="translate(-4.48 4.57) rotate(-1.1)"/>
+              <circle class="cls-17" cx="232.7" cy="232.17" r="168.07"/>
+              <circle class="cls-16" cx="229.18" cy="228.65" r="168.07" transform="translate(-3.79 453.45) rotate(-88.91)"/>
+              <circle class="cls-4" cx="225.66" cy="225.13" r="168.07" transform="translate(-7.53 442.46) rotate(-87.92)"/>
+              <circle class="cls-20" cx="222.14" cy="221.62" r="168.07" transform="translate(-10.86 431.79) rotate(-86.98)"/>
+              <circle class="cls-9" cx="218.62" cy="218.1" r="168.07" transform="translate(-13.81 421.41) rotate(-86.11)"/>
+              <circle class="cls-18" cx="215.11" cy="214.58" r="168.07" transform="translate(-16.43 411.32) rotate(-85.28)"/>
+              <circle class="cls-5" cx="211.59" cy="211.06" r="168.07" transform="translate(-18.74 401.5) rotate(-84.51)"/>
+              <circle class="cls-11" cx="208.07" cy="207.54" r="168.07" transform="translate(-20.77 391.93) rotate(-83.79)"/>
+              <circle class="cls-7" cx="204.55" cy="204.02" r="168.07" transform="translate(-22.55 382.61) rotate(-83.11)"/>
+              <circle class="cls-12" cx="201.03" cy="200.51" r="168.07" transform="translate(-24.1 373.51) rotate(-82.47)"/>
+              <circle class="cls-13" cx="197.51" cy="196.99" r="168.07" transform="translate(-25.45 364.63) rotate(-81.86)"/>
+              <circle class="cls-1" cx="194" cy="193.47" r="168.07" transform="translate(-26.61 355.94) rotate(-81.29)"/>
+              <circle class="cls-8" cx="190.48" cy="189.95" r="168.07" transform="translate(-27.6 347.45) rotate(-80.76)"/>
+              <path class="cls-15" d="M186.96,18.36c92.82,0,168.07,75.25,168.07,168.07s-75.24,168.07-168.07,168.07S18.89,279.26,18.89,186.43,94.14,18.36,186.96,18.36Z"/>
+              <path class="cls-6" d="M183.44,14.85c92.82,0,168.07,75.25,168.07,168.07s-75.24,168.07-168.07,168.07S15.37,275.74,15.37,182.91,90.62,14.85,183.44,14.85Z"/>
+              <path class="cls-21" d="M179.92,11.33c92.82,0,168.07,75.25,168.07,168.07s-75.24,168.07-168.07,168.07S11.85,272.22,11.85,179.4,87.1,11.33,179.92,11.33Z"/>
+              <path class="cls-22" d="M176.4,7.81c92.82,0,168.07,75.25,168.07,168.07s-75.24,168.07-168.07,168.07S8.34,268.7,8.34,175.88,83.58,7.81,176.4,7.81Z"/>
+            </g>
+            <path class="cls-28" d="M344.95,172.47c0,95.25-77.22,172.47-172.47,172.47S0,267.73,0,172.47,77.22,0,172.48,0s172.47,77.22,172.47,172.47Z"/>
+          </g>
+          <g id="title">
+            <text class="cls-27" transform="translate(36.77 130.32)"><tspan x="0" y="0">Depressio</tspan><tspan class="cls-25" x="218.4" y="0">n</tspan><tspan class="cls-26" x="245.56" y="0">’</tspan><tspan class="cls-23" x="256.36" y="0">s</tspan><tspan x="31.63" y="57.6">Impact on</tspan><tspan x="20.93" y="115.2">Academics</tspan></text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

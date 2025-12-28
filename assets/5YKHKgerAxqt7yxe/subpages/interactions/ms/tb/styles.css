@@ -1,0 +1,226 @@
+/* Basic Reset & Box-Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Font */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #1ba272;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main/Home Page */
+#homePage {
+  padding: 20px;
+  flex: 1;
+}
+
+/* Buttons */
+.button-group {
+  /* Center the buttons horizontally */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #1ba272;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 20px; /* Increased padding for larger buttons */
+  cursor: pointer;
+  font-size: 18px; /* Increased font size */
+  min-width: 150px; /* Ensures buttons are adequately wide */
+}
+
+.btn:hover {
+  background-color: #148a5c;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.task-list li {
+  background: #e9ecef;
+  margin-bottom: 10px;
+  padding: 20px; /* Increased padding for larger clickable area */
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px; /* Increased font size */
+}
+
+.task-list li:hover {
+  background: #d1d5d9;
+}
+
+/* The Modal (dialog) & Overlay */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px 35px; /* Increased padding for a larger dialog */
+  border-radius: 8px;
+  z-index: 1001;
+  width: 95%;
+  max-width: 700px; /* Increased max-width for a larger modal */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+/* Hide elements by default */
+.hidden {
+  display: none;
+}
+
+/* Modal Content Layout */
+.modal-content {
+  position: relative;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px; /* Increased size for better visibility */
+  font-weight: bold;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #1ba272;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px; /* Increased margin for better spacing */
+  font-size: 18px; /* Increased font size */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px; /* Increased padding for larger input fields */
+  font-size: 16px; /* Increased font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Steps List in Modal */
+.steps-list {
+  list-style: none;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.steps-list li {
+  background: #f2f2f2;
+  margin-bottom: 8px; /* Increased margin for better spacing */
+  padding: 12px 16px; /* Increased padding */
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px; /* Increased font size */
+}
+
+.steps-list li button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.steps-list li button:hover {
+  background-color: #c0392b;
+}
+
+/* Step Adder Section */
+.step-adder {
+  display: flex;
+  gap: 10px;
+}
+
+.step-adder input {
+  flex: 1;
+  padding: 12px 16px; /* Increased padding */
+  font-size: 16px; /* Increased font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.step-adder .btn {
+  padding: 12px 20px; /* Increased padding for consistency */
+  font-size: 16px; /* Increased font size */
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  margin-top: 10px; /* Increased margin for better spacing */
+  font-size: 16px; /* Increased font size */
+}
+
+/* For printing */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  #homePage, #homePage * {
+    visibility: visible !important;
+  }
+  #homePage {
+    position: static;
+    padding: 0;
+  }
+  .button-group {
+    display: none !important;
+  }
+  .task-list {
+    margin-top: 0;
+  }
+}

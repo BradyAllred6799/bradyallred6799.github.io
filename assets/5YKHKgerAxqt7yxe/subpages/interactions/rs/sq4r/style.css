@@ -1,0 +1,272 @@
+/* Import Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* General body styles */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    /* padding: 20px; */ /* Removed padding */
+    color: #2d3b45;
+}
+
+/* Container for the content */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+header {
+    background-color: #7c3a78; /* Updated Primary Color for better contrast */
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Ensures full width */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+header h1 {
+    color: #ffffff; /* White for better contrast */
+    margin: 0;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+/* Step titles and headings */
+h1 {
+    color: #2d3b45;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #2d3b45;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Paragraph styles */
+p {
+    color: #2d3b45;
+    line-height: 1.6;
+}
+
+/* List styles for the intro page */
+#intro ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#intro ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Adjust intro page paragraphs */
+#intro p {
+    font-size: 1.1em;
+}
+
+/* General input and textarea styles */
+input[type="text"], textarea {
+    font-family: 'Lato', sans-serif;
+    color: #2d3b45;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* Textarea styles for auto-resizing */
+textarea {
+    min-height: 50px; /* Optional minimum height */
+    max-height: none; /* Allow unlimited expansion */
+    overflow: hidden; /* Hide scrollbar */
+    resize: none;     /* Disable manual resizing */
+    line-height: 1.5;
+}
+
+/* Focus styles for inputs and buttons */
+input[type="text"]:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+/* Button styles */
+button {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #7c3a78; /* Updated Primary Color for better contrast */
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #6d3a6a; /* Secondary Color */
+}
+
+/* Specific styles for the delete heading button */
+.delete-heading-button {
+    background-color: #6d3a6a; /* Secondary Color */
+}
+
+.delete-heading-button:hover {
+    background-color: #7c3a78; /* Updated Primary Color for better contrast */
+}
+
+/* Step sections visibility control */
+.step {
+    display: none; /* Hide all steps by default */
+}
+
+/* Show the intro page by default */
+#intro {
+    display: block;
+    text-align: center;
+}
+
+/* Table styles for Step 2 T-Chart */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Border for table, th, and td elements */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Padding inside table cells */
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: #2d3b45;
+}
+
+/* Styling the table header */
+th {
+    background-color: #7c3a78; /* Updated Primary Color for better contrast */
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold;
+}
+
+/* Specific container styling for the heading input fields */
+.heading-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.heading-input-group label {
+    margin-bottom: 5px;
+    color: #2d3b45;
+}
+
+/* Answer display styles */
+.answer-display {
+    display: none;
+    white-space: pre-wrap; /* Preserve line breaks */
+    color: #2d3b45;
+}
+
+/* Hide relate display div on screen */
+.relate-container .answer-display {
+    display: none;
+    white-space: pre-wrap; /* Preserve line breaks */
+    color: #2d3b45;
+}
+
+/* When printing, hide textareas and show displays */
+@media print {
+    /* Ensure all steps are visible when printing */
+    .step {
+        display: block !important;
+    }
+
+    /* Hide textareas when printing */
+    textarea,
+    .answer-container textarea,
+    .relate-container textarea {
+        display: none;
+    }
+
+    .answer-display,
+    .relate-container .answer-display {
+        display: block;
+    }
+
+    /* Optional: Style the printed answers */
+    .answer-display,
+    .relate-container .answer-display {
+        font-size: 16px;
+        color: #000;
+    }
+
+    /* Optionally remove borders and background for a clean printout */
+    textarea, input[type="text"] {
+        border: none;
+        background: transparent;
+    }
+
+    /* Hide buttons during print */
+    button {
+        display: none;
+    }
+
+    /* Hide any elements that are not necessary in print */
+    #addHeadingButton,
+    .delete-heading-button {
+        display: none;
+    }
+
+    /* Adjust page margins for printing */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .heading-input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .heading-input-group .heading-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

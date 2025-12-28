@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and linking CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQ4R Reading Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Optional header content -->
+    </header>
+    <main>
+        <div class="container">
+
+            <!-- Intro Page -->
+            <div id="intro" class="step">
+                <h1>Welcome to the SQ4R Reading Tool</h1>
+                <p>The SQ4R method is a structured approach to reading that enhances comprehension and retention. It stands for:</p>
+                <ul>
+                    <li><strong>S</strong>urvey</li>
+                    <li><strong>Q</strong>uestion</li>
+                    <li><strong>R</strong>ead</li>
+                    <li><strong>R</strong>ecite</li>
+                    <li><strong>R</strong>elate</li>
+                    <li><strong>R</strong>eview</li>
+                </ul>
+                <p>This tool will guide you through each step of the SQ4R process, helping you engage deeply with your reading material.</p>
+                <p>Select "Start" to begin the process.</p>
+                <button class="nextStepButton" data-next="step1">Start</button>
+            </div>
+
+            <!-- Step 1: Survey -->
+            <div id="step1" class="step">
+                <h1>SQ4R Reading Tool - Step 1: Survey</h1>
+                <p>Add headings and bold words you find in the text. Click "Add Heading" to input multiple entries.</p>
+                <div id="headingContainer"></div>
+                <button id="addHeadingButton">Add Heading</button>
+                <button class="backStepButton" data-back="intro">Back</button>
+                <button class="nextStepButton" data-next="step2">Next Step</button>
+            </div>
+
+            <!-- Step 2: Question -->
+            <div id="step2" class="step">
+                <h1>SQ4R Reading Tool - Step 2: Question</h1>
+                <p>Turn the headings into questions.</p>
+                <div id="tChart">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Heading</th>
+                                <th>Question</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tBody"></tbody>
+                    </table>
+                </div>
+                <button class="backStepButton" data-back="step1">Back</button>
+                <button class="nextStepButton" data-next="step3">Next Step</button>
+            </div>
+
+            <!-- Step 3 & 4: Read and Recite -->
+            <div id="step3" class="step">
+                <h1>SQ4R Reading Tool - Step 3 & 4: Read and Recite</h1>
+                <div id="questionsContainer"></div>
+                <button class="backStepButton" data-back="step2">Back</button>
+                <button class="nextStepButton" data-next="step4">Next Step</button>
+            </div>
+
+            <!-- Final Step: Relate and Review -->
+            <div id="step4" class="step">
+                <h1>SQ4R Reading Tool - Final Step: Relate and Review</h1>
+                <p>Relate what you have learned to what you already know, and answer any remaining questions.</p>
+                <div class="relate-container">
+                    <label for="relate">Relate Your Knowledge</label>
+                    <textarea id="relate" placeholder="Write how this relates to your prior knowledge here"></textarea>
+                    <div id="relateDisplay" class="answer-display"></div>
+                </div>
+                <p>Review the text and make sure to commit everything to long-term memory.</p>
+                <button class="backStepButton" data-back="step3">Back</button>
+                <button id="printButton">Print Interaction</button>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <!-- Optional footer content -->
+
+    </footer>
+    <!-- Linking JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

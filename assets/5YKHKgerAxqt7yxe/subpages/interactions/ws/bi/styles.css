@@ -1,0 +1,394 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #2d3b45;
+}
+
+/* Headings and Paragraphs */
+h1, h2, h3 {
+    margin: 0 0 10px 0;
+    color: #2d3b45;
+}
+
+p {
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+    color: #2d3b45;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #2d3b45;
+}
+
+/* Header Styling */
+header {
+    background-color: #FDB729; /* Primary Color */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #2d3b45; /* Dark Text for Contrast */
+    margin: 0;
+    font-weight: 700;
+}
+
+header p {
+    color: #2d3b45;
+}
+
+.header-buttons {
+    margin-top: 15px;
+}
+
+.print-button,
+.instructions-button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #2d3b45;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.print-button:hover,
+.instructions-button:hover {
+    background-color: #2d3b45;
+    color: #FFFFFF;
+}
+
+/* Optional Diagram Image */
+.diagram {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Main Container Flex Layout */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the lists horizontally */
+    padding: 20px;
+    min-height: calc(100vh - 160px); /* Adjust based on header and footer height */
+}
+
+/* Lists Container */
+.lists-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width for large screens */
+}
+
+/* List Sections */
+.list-section {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.list-section h2 {
+    margin-top: 0;
+    color: #2d3b45;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    position: relative;
+    color: #2d3b45;
+}
+
+/* Item Header */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-header span {
+    font-weight: bold;
+}
+
+/* Input Groups */
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+.input-group input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: 'Lato', sans-serif;
+    color: #2d3b45;
+    background-color: #ffffff;
+}
+
+.input-group input[type="text"]::placeholder {
+    color: #666; /* Changed from #999 to #666 for better contrast */
+}
+
+.input-group input[type="text"]:focus {
+    border-color: #D68E1E; /* Secondary Color */
+}
+
+.add-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #A05D12; /* Darkened from #D68E1E for better contrast */
+    color: #FFFFFF;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.add-button:hover {
+    background-color: #FDB729; /* Primary Color */
+}
+
+/* Delete Button Styling */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #B45C00; /* Darkened from #D68E1E for better contrast */
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+    color: #FDB729; /* Primary Color */
+}
+
+/* Toggle Button Styling (Optional) */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #2d3b45;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.toggle-btn:hover {
+    color: #D68E1E;
+}
+
+/* Answers Div Styling */
+.answers {
+    padding-left: 20px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #D68E1E; /* Secondary Color */
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.answers p {
+    margin: 5px 0;
+    color: #2d3b45;
+}
+
+/* Modal Styling */
+.modal,
+.instructions-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content,
+.instructions-modal .modal-content {
+    background-color: #FFFFFF;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 90%;
+    max-width: 600px; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+    position: relative;
+    outline: none; /* Remove outline for accessibility handling */
+    font-family: 'Lato', sans-serif;
+    color: #2d3b45;
+}
+
+.close-button {
+    color: #2d3b45;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #D68E1E; /* Secondary Color */
+}
+
+/* Form Styling in Modals */
+.modal-content form {
+    margin-top: 20px;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.question textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+    font-family: 'Lato', sans-serif;
+    color: #2d3b45;
+    background-color: #ffffff;
+}
+
+.question textarea::placeholder {
+    color: #666; /* Changed from #999 to #666 for better contrast */
+}
+
+.question textarea:focus {
+    border-color: #D68E1E; /* Secondary Color */
+    outline: none;
+}
+
+.submit-button {
+    background-color: #D68E1E; /* Secondary Color */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background-color: #FDB729; /* Primary Color */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #FDB729; /* Primary Color */
+    color: #2d3b45;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .lists-container {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .list-section {
+        width: 45%; /* Adjusted to take less space for centering */
+    }
+}
+
+@media (max-width: 767px) {
+    .lists-container {
+        flex-direction: column;
+    }
+
+    .list-section {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    /* Hide modals and control buttons */
+    .modal,
+    .instructions-modal,
+    .print-button,
+    .instructions-button {
+        display: none;
+    }
+
+    /* Adjust layout for printing */
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    header,
+    .list-section {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .answers {
+        border-left: none;
+        padding-left: 0;
+        background-color: transparent;
+    }
+
+    /* Ensure lists occupy full width */
+    .lists-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .list-section {
+        width: 100%;
+    }
+}

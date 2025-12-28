@@ -1,0 +1,47 @@
+/* Keyframe animations for scaling only */
+@keyframes scaleUp {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Base styles for the container */
+.col-lg-3.col-md-4.col-sm-6.col-xs-12 {
+  background-color: transparent;
+  /* Perspective is not needed if you’re not doing 3D transformations */
+  perspective: none;
+}
+
+/* Styles for the inner container */
+.dp-column-liner {
+  background-color: transparent;
+}
+
+/* Remove transitions and transforms from images */
+.col-lg-3.col-md-4.col-sm-6.col-xs-12 img,
+.dp-modal-trigger img,
+.col-lg-4.col-md-4.col-sm-12 img.target-image,
+a img {
+  /* No transitions or transforms needed here */
+}
+
+/* Hover effect for scaling images */
+.col-lg-3.col-md-4.col-sm-6.col-xs-12:hover img,
+.col-lg-4.col-md-4.col-sm-12:hover img.target-image {
+  animation: scaleUp 0.2s forwards;
+}
+
+/* If you also want triggered images in other containers (like dp-modal-trigger and anchor tags) to just grow: */
+.dp-modal-trigger:hover img,
+a:hover img {
+  animation: scaleUp 0.2s forwards;
+}
+
+/* Override styles for images within the dialog box */
+.dp-modal-content img {
+  transition: none;
+}
+
+.dp-modal-content:hover img {
+  transform: none;
+}

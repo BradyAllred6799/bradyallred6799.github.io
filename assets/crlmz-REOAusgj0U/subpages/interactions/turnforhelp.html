@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5-Minute Spiritual Wellness Activity</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  h2, p {
+    color: #333;
+  }
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    border-radius: 5px;
+    resize: none;
+  }
+  button {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    display: block;
+    margin: 0 auto;
+  }
+  button:hover {
+    background-color: #004085;
+  }
+  .printable-text {
+    visibility: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Who can you turn to for help when you are distressed?</h2>
+  
+  <textarea aria-label="Type the names of who you can turn to for help" id="introduction" placeholder="Your thoughts..."></textarea>
+  
+  
+</div>
+
+<button onclick="printResponses()" aria-label="Print responses">Print Responses</button>
+<script>
+  function autoGrow(element) {
+    element.style.height = "5px";
+    element.style.height = (element.scrollHeight)+"px";
+  }
+
+  document.querySelectorAll('textarea').forEach(textarea => {
+    textarea.addEventListener('input', function() {
+      autoGrow(this);
+    });
+  });
+
+  function printResponses() {
+    // Create hidden div elements for printing
+    var printContents = document.createElement('div');
+    printContents.className = 'printable-text';
+    document.body.appendChild(printContents);
+
+    // Transfer textarea contents to the hidden divs
+    document.querySelectorAll('textarea').forEach(function(textarea) {
+      var printDiv = document.createElement('div');
+      printDiv.textContent = textarea.value;
+      printContents.appendChild(printDiv);
+    });
+
+    // Print the page
+    window.print();
+
+    // Remove the printable text div after printing
+    document.body.removeChild(printContents);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432.27 432.27"><defs><style>.cls-1 {
+        fill: #f96b13;
+      }
+
+      .cls-2 {
+        fill: #ffca73;
+      }
+
+      .cls-3 {
+        fill: #cc4e00;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        opacity: .9;
+        stroke: #041189;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }</style></defs><g id="Layer_1-2" data-name="Layer 1"><g><rect class="cls-4" x="2.5" y="2.5" width="427.27" height="427.27" rx="12" ry="12"/><g><path class="cls-1" d="M88.36,141.19v150l127.78,74.95v-37.42l-95.83-56.34v-112.47l-31.94-18.71Z"/><path class="cls-3" d="M311.97,159.9v150l31.94-18.71v-150l-31.94,18.71Z"/><path class="cls-2" d="M184.19,84.85l127.78,75.05,31.94-18.71-127.78-75.05-31.94,18.71Z"/><path class="cls-2" d="M88.36,141.19l31.94,18.71,31.94-18.71-31.94-18.82-31.94,18.82Z"/><path class="cls-3" d="M120.3,159.9v112.47l31.94-18.71v-112.47l-31.94,18.71Z"/><path class="cls-3" d="M216.14,328.72v37.42l31.94-18.71v-37.53l-31.94,18.82Z"/><path class="cls-2" d="M120.3,272.37l95.83,56.34,31.94-18.82-95.83-56.24-31.94,18.71Z"/><path class="cls-1" d="M184.19,84.85v37.53l95.83,56.24v112.58l31.94,18.71v-150l-127.78-75.05Z"/></g></g></g></svg>

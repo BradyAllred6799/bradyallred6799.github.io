@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overcoming Procrastination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Overcoming Procrastination</h1>
+    </header>
+    <main>
+        <section id="step1" class="step" aria-labelledby="step1-heading">
+            <h2 id="step1-heading">Step 1: Acknowledge Your Stress</h2>
+            <p>Please take a moment to acknowledge what is causing you stress.</p>
+            <label for="stressInput">Your Stressors:</label>
+            <textarea id="stressInput" name="stressInput" placeholder="Write down your stressors here..." required></textarea>
+            <button id="nextToStep2" class="btn">Next</button>
+        </section>
+        <section id="step2" class="step" style="display: none;" aria-labelledby="step2-heading">
+            <h2 id="step2-heading">Step 2: Countdown from 5</h2>
+            <p>Let's interrupt the procrastination habit with a countdown.</p>
+            <button id="startCountdown" class="btn">Start Countdown</button>
+            <div id="countdownDisplay" aria-live="assertive"></div>
+        </section>
+        <section id="step3" class="step" style="display: none;" aria-labelledby="step3-heading">
+            <h2 id="step3-heading">Step 3: Make a Conscious Choice to Act</h2>
+            <p>You have the power to choose your next action. Please write down what you will do next.</p>
+            <label for="actionPlan">Your Action Plan:</label>
+            <textarea id="actionPlan" name="actionPlan" placeholder="Write down what you will do..." required></textarea>
+            <button id="nextToStep4" class="btn">Next</button>
+        </section>
+        <section id="step4" class="step" style="display: none;" aria-labelledby="step4-heading">
+            <h2 id="step4-heading">Step 4: Work for Five Minutes</h2>
+            <p>Commit to working on your task for just five minutes.</p>
+            <div id="timerDisplay" aria-live="polite">05:00</div>
+            <button id="startTimer" class="btn">Start Working</button>
+            <button id="pauseTimer" class="btn" style="display: none;">Pause Timer</button>
+        </section>
+        <section id="completionMessage" class="step" style="display: none;" aria-labelledby="completion-heading">
+            <h2 id="completion-heading">Great Job!</h2>
+            <p>You took a significant step towards overcoming procrastination.</p>
+        </section>
+    </main>
+   
+    <script src="script.js"></script>
+</body>
+</html>

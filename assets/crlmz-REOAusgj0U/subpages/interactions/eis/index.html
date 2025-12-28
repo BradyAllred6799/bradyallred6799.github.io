@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eisenhower Matrix</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Eisenhower Matrix</h1>
+    
+    <!-- Instructions Section -->
+    <div class="instructions">
+      <p>Use the Eisenhower Matrix to prioritize tasks by adding them to the appropriate quadrant based on their urgency and importance. You can drag and drop tasks between quadrants, edit or complete them, and view completed tasks by toggling the "Show Completed Tasks" button. When ready, click the Print button to print a copy of your tasks.</p>
+    </div>
+
+    <!-- Matrix Quadrants -->
+    <div class="matrix">
+      <div class="quadrant" id="q1" ondrop="drop(event, 'q1')" ondragover="allowDrop(event)">
+        <div class="header">
+          <h2>Urgent & Important</h2>
+          <i class="fas fa-plus-circle" onclick="addTask('q1')" aria-label="Add task to Urgent & Important"></i>
+        </div>
+        <div class="task-container">
+          <ul id="list-q1"></ul>
+        </div>
+      </div>
+      <div class="quadrant" id="q2" ondrop="drop(event, 'q2')" ondragover="allowDrop(event)">
+        <div class="header">
+          <h2>Not Urgent & Important</h2>
+          <i class="fas fa-plus-circle" onclick="addTask('q2')" aria-label="Add task to Not Urgent & Important"></i>
+        </div>
+        <div class="task-container">
+          <ul id="list-q2"></ul>
+        </div>
+      </div>
+      <div class="quadrant" id="q3" ondrop="drop(event, 'q3')" ondragover="allowDrop(event)">
+        <div class="header">
+          <h2>Urgent & Not Important</h2>
+          <i class="fas fa-plus-circle" onclick="addTask('q3')" aria-label="Add task to Urgent & Not Important"></i>
+        </div>
+        <div class="task-container">
+          <ul id="list-q3"></ul>
+        </div>
+      </div>
+      <div class="quadrant" id="q4" ondrop="drop(event, 'q4')" ondragover="allowDrop(event)">
+        <div class="header">
+          <h2>Not Urgent & Not Important</h2>
+          <i class="fas fa-plus-circle" onclick="addTask('q4')" aria-label="Add task to Not Urgent & Not Important"></i>
+        </div>
+        <div class="task-container">
+          <ul id="list-q4"></ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Full Screen and Print Icons with Labels -->
+    <!-- <button class="icon-btn" onclick="toggleFullscreen()" aria-label="Full Screen">
+      <i class="fas fa-expand"></i> <span>Full Screen</span>
+    </button> -->
+    <button class="icon-btn" onclick="printMatrix()" aria-label="Print Matrix">
+      <i class="fas fa-print"></i> <span>Print</span>
+    </button>
+
+    <!-- Completed Tasks Section -->
+    <div class="completed-section">
+      <button class="toggle-completed" onclick="toggleCompletedTasks()" aria-live="polite">Show Completed Tasks</button>
+      <div id="completed-tasks" style="display: none;">
+        <h2>Completed Tasks</h2>
+        <ul id="list-completed"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

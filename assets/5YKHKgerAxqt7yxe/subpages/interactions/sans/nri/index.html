@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Note Review Tool</title>
+  <!-- Link to Google Fonts for Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+      <h1>Note Review Tool</h1>
+  </header>
+
+  <div class="container">
+      <form id="reviewForm">
+          <!-- Step 1: Reorganize or Rewrite Notes (Multi-Format) -->
+          <div class="form-step active">
+              <h2>Step 1: Reorganize or Rewrite Notes</h2>
+              <p class="instructions">
+                Select one or more formats below to reorganize your notes. 
+                <strong>Outline</strong> for a textual breakdown, 
+                <strong>Chart</strong> to arrange info in rows/columns, 
+                or <strong>Mind Map</strong> for a visual approach.
+                Reorganizing your notes can help you grasp the material more effectively.
+              </p>
+
+              <div class="format-checkboxes">
+                  <label>
+                      <input type="checkbox" id="outlineCheck">
+                      Outline
+                  </label>
+                  <label>
+                      <input type="checkbox" id="chartCheck">
+                      Chart
+                  </label>
+                  <label>
+                      <input type="checkbox" id="mindmapCheck">
+                      Mind Map
+                  </label>
+              </div>
+
+              <!-- Outline Container -->
+              <div id="outlineContainer" class="hidden" aria-hidden="true">
+                  <label for="outlineInput">Enter your outline:</label>
+                  <textarea 
+                    id="outlineInput" 
+                    placeholder="Break your notes into main topics and subtopics here...">
+                  </textarea>
+              </div>
+
+              <!-- Chart Container -->
+              <div id="chartContainer" class="hidden" aria-hidden="true">
+                  <label>Create a Chart:</label>
+                  <div class="chart-controls">
+                      <button type="button" id="addRowBtn">Add Row</button>
+                      <button type="button" id="addColBtn">Add Column</button>
+                  </div>
+                  <table id="dynamicChart" aria-label="Dynamic Chart Table">
+                      <!-- Built dynamically -->
+                  </table>
+              </div>
+
+              <!-- Mind Map Container -->
+              <div id="mindmapContainer" class="hidden" aria-hidden="true">
+                  <label>Create a Mind Map:</label>
+                  <div class="mindmap-controls">
+                      <input type="text" id="nodeNameInput" placeholder="Node Label"/>
+                      <button type="button" id="addNodeBtn">Add Node</button>
+                      <select id="fromNodeSelect">
+                          <option value="" disabled selected>Connect: From</option>
+                      </select>
+                      <select id="toNodeSelect">
+                          <option value="" disabled selected>To</option>
+                      </select>
+                      <button type="button" id="connectNodesBtn">Connect Nodes</button>
+                  </div>
+                  
+                  <div class="mindmap-wrapper">
+                      <canvas id="mindmapCanvas" width="600" height="400" aria-label="Mind Map Canvas"></canvas>
+                  </div>
+              </div>
+
+              <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <!-- Step 2: Create Flashcards -->
+          <div class="form-step">
+              <h2>Step 2: Create Flashcards</h2>
+              <p class="instructions">
+                Use flashcards to reinforce memory. Each card has a <strong>Term</strong> and a <strong>Definition</strong>.
+                <strong>Flashcards are a form of active learning that helps you retain important information better than simply rereading your outline, chart, or mind map.</strong>
+                This helps with quick self-testing and spaced repetition.
+              </p>
+              
+              <div id="flashcardsContainer">
+                  <div class="flashcard">
+                      <input type="text" class="term" placeholder="Term" required aria-label="Term">
+                      <input type="text" class="definition" placeholder="Definition" required aria-label="Definition">
+                      <button type="button" class="remove-card">Remove</button>
+                  </div>
+              </div>
+              <button type="button" id="addCard">Add Flashcard</button>
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <!-- Step 3: Schedule Review Time -->
+          <div class="form-step">
+              <h2>Step 3: Schedule Review Time</h2>
+              <p class="instructions">
+                Setting a review date and time increases the chance you'll follow through.
+                Consistent review is key to retaining knowledge long-term.
+              </p>
+
+              <label for="reviewDate">Select Date:</label>
+              <input type="date" id="reviewDate" required aria-required="true">
+              
+              <label for="reviewTime">Select Time:</label>
+              <input type="time" id="reviewTime" required aria-required="true">
+
+              <div class="schedule-buttons">
+                  <button type="button" class="prev-btn">Previous</button>
+                  <button type="submit">Finish</button>
+              </div>
+          </div>
+      </form>
+
+      <!-- Summary Output -->
+      <div id="summaryOutput" class="hidden">
+          <h2>Review Summary</h2>
+          
+          <!-- Outline -->
+          <div id="displayOutlineSection" class="hidden">
+              <p><strong>Outline:</strong></p>
+              <p id="displayOutline"></p>
+          </div>
+
+          <!-- Chart -->
+          <div id="displayChartSection" class="hidden">
+              <p><strong>Chart:</strong></p>
+              <div id="displayChart"></div>
+          </div>
+
+          <!-- Mind Map -->
+          <div id="displayMindmapSection" class="hidden">
+              <p><strong>Mind Map - Connections:</strong></p>
+              <div id="displayMindmap"></div>
+              <p><strong>Mind Map Snapshot:</strong></p>
+              <img id="displayMindmapImage" alt="Mind Map Snapshot" class="hidden" />
+          </div>
+
+          <p><strong>Flashcards:</strong></p>
+          <ul id="displayFlashcards"></ul>
+
+          <p><strong>Scheduled Review:</strong> <span id="displaySchedule"></span></p>
+
+          <div id="flashcardReview" class="hidden">
+              <h2>Flashcard Review</h2>
+              <div class="flashcard-review-container">
+                  <div class="flashcard-front" id="flashcardFront"></div>
+                  <div class="flashcard-back" id="flashcardBack"></div>
+              </div>
+              <button id="prevFlashcard">Previous</button>
+              <button id="flipFlashcard">Flip</button>
+              <button id="nextFlashcard">Next</button>
+          </div>
+
+          <!-- Review and Print Buttons -->
+          <div class="summary-buttons">
+              <button id="reviewButton">Review Flashcards</button>
+              <button id="printButton">Print Summary</button>
+          </div>
+      </div>
+
+      <!-- Printable Flashcards -->
+      <div id="printableFlashcards">
+          <h2>Flashcards</h2>
+          <div class="print-flashcards-container">
+              <!-- Flashcards will be dynamically inserted here -->
+          </div>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

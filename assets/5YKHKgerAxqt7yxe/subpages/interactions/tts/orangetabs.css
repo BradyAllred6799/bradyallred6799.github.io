@@ -1,0 +1,16 @@
+/* 
+  Default/collapsed tabs = grey
+  Active/expanded tabs = orange (#f08047)
+*/
+
+.dp-tabs-buttons .dp-panel-heading {
+  background-color: #999999 !important; /* Grey color for inactive */
+  color: #000000 !important;            /* Text color */
+}
+
+/* When a panel is open, the .is-open class is usually added.
+   Adjust the color for the active tab. */
+.dp-tabs-buttons .dp-panel-group.is-open > .dp-panel-heading {
+  background-color: #f08047 !important; /* Orange color for active */
+  color: #000000 !important;
+}

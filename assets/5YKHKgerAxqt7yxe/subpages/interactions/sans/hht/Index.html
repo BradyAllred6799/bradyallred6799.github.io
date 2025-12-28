@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Help Tool</title>
+    <!-- Link to Google Fonts for Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Homework Help Tool</h1>
+    </header>
+    
+    <div id="welcome-message" class="container">
+        <h1>Hello! Welcome to the Homework Help Tool.</h1>
+        <p>This tool will help you break your homework into smaller, manageable chunks and provide guidance to help you reach your goals. Here’s how it works:</p>
+        <ul>
+            <li><strong>Work in 25-Minute Blocks:</strong> Set a goal for what part of the assignment you will complete in each block. After 25 minutes, review your progress and set a new goal for the next block.</li>
+            <li><strong>Take Breaks:</strong> You have the option to take a 5-minute break after each block. After three 25-minute blocks, you can take a longer break.</li>
+            <li><strong>Track Your Goals:</strong> We will keep a record of your goals, which you can access at any time. You can also take notes while you work.</li>
+            <li><strong>Reflect and Create a Study Guide:</strong> At the end of the session, reflect on what you have learned. Record information to help you create a study guide for your course.</li>
+            <li>Remember, not meeting a goal is not a failure. It just helps you set a more informed goal for the next block.</li>
+        </ul>
+        <p>Let’s get started! What assignment will you be working on today?</p>
+        <div class="input-container">
+            <label for="assignment-name">Assignment Name:</label>
+            <input type="text" id="assignment-name" placeholder="Enter assignment name">
+            <div id="assignment-name-error" class="error-message" aria-live="assertive"></div>
+        </div>
+        <div>
+            <button id="next-button">Next</button>
+        </div>
+    </div>
+
+    <div id="first-block" class="container" style="display:none;">
+        <h2>Great! Now, what would you like to complete in the first 25-minute block of the assignment?</h2>
+        <div class="input-container">
+            <label for="first-goal">First Goal:</label>
+            <input type="text" id="first-goal" placeholder="Enter your first goal">
+            <div id="first-goal-error" class="error-message" aria-live="assertive"></div>
+        </div>
+        <button onclick="beginFirstBlock()">Begin</button>
+    </div>
+
+    <div id="work-session" class="container" style="display:none;">
+        <h2 id="assignment-title"></h2>
+        <h3 id="current-goal"></h3>
+        <div class="input-container">
+            <label for="notes">Notes:</label>
+            <textarea id="notes" placeholder="Take notes here..."></textarea>
+        </div>
+        <div class="button-group">
+            <button onclick="showGoalsAndNotes()">View Goals and Notes</button>
+            <button onclick="endSession()">End Session</button>
+        </div>
+        <div id="timer" aria-live="polite">25:00</div>
+        <div class="timer-buttons">
+            <button id="pause-button" onclick="pauseTimer('timer', 'pause-button')" aria-label="Pause Timer">Pause</button>
+            <button id="reset-button" onclick="resetTimer()" aria-label="Reset Timer">Reset</button>
+        </div>
+    </div>
+
+    <!-- Goals and Notes Popup -->
+    <div id="goals-notes-popup" class="modal" role="dialog" aria-modal="true" aria-labelledby="goals-notes-title" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="goals-notes-title">Your Goals and Notes</h2>
+            <div id="goals-notes-content"></div>
+            <div class="button-group">
+                <button onclick="closeGoalsAndNotes()">Close</button>
+                <button onclick="printGoalsAndNotes()">Print</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Session Popup -->
+    <div id="end-session-popup" class="modal" role="dialog" aria-modal="true" aria-labelledby="end-session-title" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="end-session-title">Session Ended</h2>
+            <div id="end-session-content">
+                <p>Here are your goals and notes for this session:</p>
+                <div id="end-session-goals-notes"></div>
+            </div>
+            <div class="button-group">
+                <button onclick="printGoalsAndNotes()">Print</button>
+                <button onclick="closeEndSessionPopup()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Next Goal Popup -->
+    <div id="next-goal-popup" class="modal" role="dialog" aria-modal="true" aria-labelledby="next-goal-title" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="next-goal-title">Set Your Next Goal</h2>
+            <div class="input-container">
+                <label for="next-goal">Next Goal:</label>
+                <input type="text" id="next-goal" placeholder="Enter your next goal">
+                <div id="next-goal-error" class="error-message" aria-live="assertive"></div>
+            </div>
+            <div class="button-group">
+                <button onclick="continueWork()">Continue</button>
+                <button onclick="takeBreak()">Take a Break</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three Sessions Popup -->
+    <div id="three-sessions-popup" class="modal" role="dialog" aria-modal="true" aria-labelledby="three-sessions-title" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="three-sessions-title">Time for a Longer Break!</h2>
+            <p>You've completed three work sessions. Would you like to take a longer break?</p>
+            <div class="button-group">
+                <button onclick="showLongBreakPopup()">Yes, take a long break</button>
+                <button onclick="continueWork()">No, continue working</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Long Break Popup -->
+    <div id="long-break-popup" class="modal" role="dialog" aria-modal="true" aria-labelledby="long-break-title" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="long-break-title">Long Break Time!</h2>
+            <div class="input-container">
+                <label for="long-break-next-goal">Next Goal After Break:</label>
+                <input type="text" id="long-break-next-goal" placeholder="Enter your next goal">
+                <div id="long-break-next-goal-error" class="error-message" aria-live="assertive"></div>
+            </div>
+            <div class="button-group">
+                <button onclick="takeLongBreak()">Start Long Break</button>
+                <button onclick="continueWork()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Break Popup -->
+    <div id="break-popup" class="modal" role="dialog" aria-modal="true" aria-labelledby="break-title" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="break-title">Take a Break</h2>
+            <p>Enjoy your break!</p>
+            <div class="button-group">
+                <button onclick="endBreak()">End Break</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reflection Popup -->
+    <div id="reflection-popup" class="modal" role="dialog" aria-modal="true" aria-labelledby="reflection-title" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="reflection-title">Reflect on Your Session</h2>
+            <div class="input-container">
+                <label for="reflection">Reflection:</label>
+                <textarea id="reflection" placeholder="Write your reflection here..."></textarea>
+            </div>
+            <div class="button-group">
+                <button onclick="printReflection()">Print Reflection</button>
+                <button onclick="closeReflectionPopup()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

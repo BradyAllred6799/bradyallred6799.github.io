@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432.27 432.27"><defs><style>.cls-1 {
+        fill: #001e36;
+      }
+
+      .cls-2 {
+        fill: #31a8ff;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        opacity: .9;
+        stroke: #041189;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }</style></defs><g id="Layer_1-2" data-name="Layer 1"><g><rect class="cls-3" x="2.5" y="2.5" width="427.27" height="427.27" rx="12" ry="12"/><g><g id="Surfaces"><g id="Photo_Surface" data-name="Photo Surface"><g id="Outline_no_shadow" data-name="Outline no shadow"><rect class="cls-1" x="66.14" y="66.14" width="300" height="300" rx="41.97" ry="41.97"/></g></g></g><g id="Outlined_Mnemonics_Logos" data-name="Outlined Mnemonics Logos"><g id="Ps"><g><path class="cls-2" d="M170.89,146.06c39.22,0,61.31,18.37,61.31,49.13,0,35.91-29.92,50.36-58,50.36h-18.99v38.81h-38.4v-138.29h54.08ZM155.21,178.88v33.85h16.92c11.77,0,20.03-4.74,20.03-16.72,0-10.94-7.01-17.13-19.19-17.13h-17.76Z"/><path class="cls-2" d="M240,277.55l.21-31.99c10.94,7.22,26.22,11.77,36.74,11.77,7.22,0,10.53-2.06,10.53-5.78,0-4.13-4.54-5.78-13.21-8.46-16.72-4.95-35.09-11.77-35.09-33.64s18.37-34.68,45-34.68c12.59,0,22.91,1.86,31.99,5.78l-.21,30.55c-7.22-4.33-21.46-8.26-30.76-8.26-6.81,0-9.5,2.06-9.5,5.15,0,3.72,3.31,4.74,13.21,7.85,19.19,5.78,35.29,11.97,35.29,34.47s-17.54,35.91-45,35.91c-14.45,0-28.08-2.47-39.22-8.67h.01Z"/></g></g></g></g></g></g></svg>

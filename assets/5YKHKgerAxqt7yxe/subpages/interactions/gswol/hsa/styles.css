@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #2d3b45;
+}
+
+/* Skip to Content Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2071b9;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Header */
+header {
+    background-color: #2071b9;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Main Container */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Steps */
+.step {
+    display: none;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.step.active {
+    display: block;
+}
+
+.step h2 {
+    font-size: 1.5em;
+    color: #2071b9;
+}
+
+.step p {
+    margin-bottom: 15px;
+}
+
+.step ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.step li {
+    margin-bottom: 10px;
+}
+
+/* Input Groups */
+.need-group, .helper-group, .resource-entry {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea, input[type="date"], input[type="time"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+button {
+    background-color: #2071b9;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #005b9a;
+}
+
+.add-button {
+    background-color: #28a745;
+}
+
+.add-button:hover {
+    background-color: #1e7e34;
+}
+
+.remove-resource-button {
+    background-color: #dc3545;
+}
+
+.remove-resource-button:hover {
+    background-color: #c82333;
+}
+
+.calendar-buttons {
+    margin-top: 10px;
+}
+
+.calendar-button {
+    background-color: #17a2b8;
+}
+
+.calendar-button:hover {
+    background-color: #117a8b;
+}
+
+/* Navigation Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons button {
+    margin: 5px;
+}
+
+/* Print Section */
+.print-only {
+    display: none;
+}
+
+@media print {
+    body {
+        background-color: #ffffff;
+    }
+    .print-only {
+        display: block;
+    }
+    .step {
+        display: none;
+    }
+    header, .skip-link, .growth-mindset, .navigation, button {
+        display: none;
+    }
+}
+
+/* Summary Section */
+.summary {
+    display: none;
+}
+
+.summary-section {
+    margin-bottom: 20px;
+}
+
+.summary-section h3 {
+    color: #2071b9;
+}
+
+.summary-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.summary-section li {
+    margin-bottom: 10px;
+}
+
+/* Growth Mindset Text */
+.growth-mindset {
+    font-style: italic;
+    color: #555555;
+    margin-top: 10px;
+}
+
+/* Container for Needs, Helpers, and Plans */
+#needs-container, #helpers-container, #plans-container {
+    margin-bottom: 20px;
+}

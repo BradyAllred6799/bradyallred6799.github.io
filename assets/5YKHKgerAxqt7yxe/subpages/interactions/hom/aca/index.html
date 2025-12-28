@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Support Navigator</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Student Support Navigator</h1>
+
+  <div class="instructions">
+    <p>
+      <strong>How to Use:</strong>
+      Type key words that describe your academic challenge in the box below.
+      Select any result to see more details.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="e.g. 'Time Management'"
+    />
+    <button id="searchButton">Search</button>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="searchResults">
+    <h2>Search Results</h2>
+    <div id="searchResultsList"></div>
+  </div>
+
+  <!-- 1) Load Fuse.js from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+
+  <!-- 2) Link to your external JavaScript file -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Seeking Assistant</title>
+    <!-- Google Fonts: Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <h1>Help Seeking Assistant</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" id="main-content" tabindex="-1">
+        <p>
+            Help-seeking can be a challenging thing, especially if you don’t know where to look for help. 
+            This tool will guide you through the 4-step help-seeking process: 
+            <strong>Become Aware of Needs</strong>, <strong>Identify Helpers</strong>, <strong>Ask for Help</strong>, and <strong>Evaluate the Help</strong>.
+            <br><em>Remember, recognizing your needs is the first step towards personal growth.</em>
+        </p>
+
+        <!-- Step 1 -->
+        <section class="step active" id="step-1" aria-labelledby="step-1-heading">
+            <h2 id="step-1-heading">Step 1: Become Aware of Needs</h2>
+            <p>Take a few minutes to identify your most pressing needs. They can be academic or non-academic, but ensure they are genuine and significant.</p>
+            
+            <div id="needs-container">
+                <!-- Dynamic need inputs will be injected here -->
+            </div>
+            <button type="button" onclick="addNeed()" class="add-button" aria-label="Add a new need">Add Need</button>
+            
+            <p class="growth-mindset">*Acknowledging your needs is a courageous step towards improvement.*</p>
+            <div class="buttons">
+                <div></div> <!-- Empty div for spacing -->
+                <button type="button" onclick="nextStep()" aria-label="Next Step">Next</button>
+            </div>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="step" id="step-2" aria-labelledby="step-2-heading">
+            <h2 id="step-2-heading">Step 2: Identify Helpers</h2>
+            <p>For each need you've identified, list the helpers available to you. Helpers can be individuals, organizations, or resources that can assist you.</p>
+            
+            <div id="helpers-container">
+                <!-- Dynamic helper inputs will be injected here -->
+            </div>
+            
+            <p class="growth-mindset">*Seeking support is a powerful way to overcome challenges and grow.*</p>
+            <div class="buttons">
+                <button type="button" onclick="prevStep()" aria-label="Previous Step">Previous</button>
+                <button type="button" onclick="nextStep()" aria-label="Next Step">Next</button>
+            </div>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="step" id="step-3" aria-labelledby="step-3-heading">
+            <h2 id="step-3-heading">Step 3: Ask for Help</h2>
+            <p>For each helper you've identified, create a plan detailing how and when you will reach out to them.</p>
+            
+            <div id="plans-container">
+                <!-- Dynamic plan inputs will be injected here -->
+            </div>
+            
+            <p class="growth-mindset">*Taking initiative to ask for help fosters resilience and continuous learning.*</p>
+            <div class="buttons">
+                <button type="button" onclick="prevStep()" aria-label="Previous Step">Previous</button>
+                <button type="button" onclick="nextStep()" aria-label="Next Step">Next</button>
+            </div>
+        </section>
+
+        <!-- Step 4 -->
+        <section class="step" id="step-4" aria-labelledby="step-4-heading">
+            <h2 id="step-4-heading">Step 4: Evaluate the Help</h2>
+            <p>After you’ve sought help, return to this plan that you have saved and reflect on your experience. Answer the following questions:</p>
+            <ul>
+                <li>Did the resource help me in the way I expected?</li>
+                <li>Do I need more help, or can I move forward on my own?</li>
+                <li>Would I recommend this resource to a friend?</li>
+                <li>Will I use this type of resource again?</li>
+            </ul>
+            <button class="print-button" onclick="printPDF()" aria-label="Print your help seeking plan to PDF">Print to PDF</button>
+            <p class="growth-mindset">*Great job on completing your help-seeking plan! Remember, growth is a continuous journey.*</p>
+        </section>
+
+        <!-- Summary (Hidden, used for printing) -->
+        <section class="summary" id="summary" aria-labelledby="summary-heading">
+            <h2 id="summary-heading">Your Help Seeking Plan</h2>
+            <div id="summary-content">
+                <!-- Dynamic summary content will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

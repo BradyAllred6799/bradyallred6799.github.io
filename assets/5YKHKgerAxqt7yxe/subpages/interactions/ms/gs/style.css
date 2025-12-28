@@ -1,0 +1,331 @@
+/* Global Styles */
+body {
+    font-family: 'Lato', sans-serif; /* Updated to Lato */
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #2d3b45; /* Primary text color */
+}
+
+header, footer {
+    background-color: #1ba272; /* Primary color */
+    color: #ffffff; /* White text for better contrast on primary color */
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #ffffff; /* Subtitle text is white */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ffffff; /* Footer text is white */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: #148a5c; /* Updated to darker primary color for contrast */
+    transition: width 0.3s ease;
+}
+
+.step {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2 {
+    color: #2d3b45; /* Primary text color */
+    margin-top: 0;
+}
+
+p {
+    color: #2d3b45; /* Primary text color */
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #2d3b45; /* Label color matches primary text color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea {
+    font-family: 'Lato', sans-serif; /* Ensures consistency */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    color: #2d3b45; /* Primary text color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #2d3b45; /* Text color for input fields */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #1ba272; /* Primary color on focus */
+    box-shadow: 0 0 5px rgba(32, 113, 185, 0.3); /* Primary color shadow */
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #2d3b45; /* Text color for textarea */
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #1ba272; /* Primary color on focus */
+    box-shadow: 0 0 5px rgba(32, 113, 185, 0.3); /* Primary color shadow */
+}
+
+.example-label {
+    font-weight: bold;
+    color: #2d3b45; /* Primary text color */
+}
+
+.example-text {
+    display: block;
+    margin-bottom: 10px;
+    color: #2d3b45; /* Primary text color */
+    font-style: italic;
+}
+
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 5px;
+    background-color: #1ba272; /* Primary color */
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover, button:focus {
+    background-color: #148a5c; /* Darker shade for hover and focus */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(32, 113, 185, 0.5); /* Primary color shadow */
+}
+
+button:active {
+    background-color: #148a5c; /* Even darker shade when active */
+}
+
+#summary-content {
+    white-space: pre-wrap;
+    color: #2d3b45; /* Primary text color */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #1ba272; /* Primary color border */
+    margin-bottom: 20px;
+}
+
+.achievement {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.achievement img {
+    width: 100px;
+    height: 100px;
+}
+
+.achievement p {
+    font-size: 1.2em;
+    color: #2d3b45; /* Primary text color */
+}
+
+.sharing-options {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sharing-options button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #b46a15; /* Updated to darker secondary color for contrast */
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sharing-options button:hover,
+.sharing-options button:focus {
+    background-color: #a05d13; /* Even darker shade for hover and focus */
+}
+
+.calendar-options {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendar-options h3 {
+    color: #1ba272; /* Primary color */
+    margin-bottom: 15px;
+}
+
+.calendar-options button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #b46a15; /* Updated to darker secondary color for contrast */
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calendar-options button:hover,
+.calendar-options button:focus {
+    background-color: #a05d13; /* Even darker shade for hover and focus */
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"] {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* Accessibility Enhancements */
+a, button, textarea, input {
+    font-family: inherit;
+}
+
+input, textarea, button {
+    font-size: 1em;
+}
+
+input[aria-required="true"]:required,
+textarea[aria-required="true"]:required {
+    border-left: 4px solid #e53935; /* Red border for required fields */
+}
+
+input[aria-required="true"]:required:focus,
+textarea[aria-required="true"]:required:focus {
+    border-left-color: #d32f2f; /* Darker red on focus */
+}
+
+/* Print Styles */
+@media print {
+    @page {
+        margin: 20mm; /* Adjust as needed */
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    body * {
+        visibility: hidden;
+    }
+    header, header * {
+        visibility: visible;
+    }
+    #summary-content, #summary-content * {
+        visibility: visible;
+    }
+    header {
+        position: relative; /* Changed from fixed to relative */
+        top: auto;
+        left: 0;
+        width: 100%;
+        margin-bottom: 20px; /* Added margin to separate header from content */
+    }
+    #summary-content {
+        position: relative; /* Changed from absolute to relative */
+        top: auto; /* Reset top position */
+        left: 0;
+        width: 100%;
+    }
+    button, footer, .progress-bar, .achievement, .sharing-options, .calendar-options {
+        display: none;
+    }
+    .navigation-buttons {
+        display: none;
+    }
+}

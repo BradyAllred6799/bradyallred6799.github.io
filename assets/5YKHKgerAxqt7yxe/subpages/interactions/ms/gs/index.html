@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GROW Model Goal Setting Tool with SMART Goals</title>
+    <!-- Include Lato Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GROW Model Goal Setting Tool</h1>
+        <p>Set your goals and plan your success with the GROW model and SMART goals!</p>
+        <!-- Added a date placeholder -->
+        <p id="print-date"></p>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar" aria-label="Progress">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <!-- Step 0: Welcome and Name Input -->
+            <div class="step" id="step-welcome">
+                <h2>Welcome!</h2>
+                <p>Please enter your name to personalize your experience:</p>
+                <form id="form-welcome">
+                    <div class="form-group">
+                        <label for="student-name">Your Name:</label>
+                        <input type="text" id="student-name" name="student_name" required aria-required="true">
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" onclick="startTool()">Start</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 1: SMART Goal -->
+            <div class="step" id="step-smartgoal" style="display:none;">
+                <h2>Goal - Setting a SMART Goal</h2>
+                <p id="personalized-message"></p>
+                <p>The first step in the GROW model is to clearly define the goal or outcome you want to achieve. We'll help you set a SMART goal by guiding you through each component: Specific, Measurable, Achievable, Relevant, and Time-bound.</p>
+                <p><strong>Process:</strong> Answer the following questions to articulate your SMART goal.</p>
+                <form id="form-smartgoal">
+                    <!-- The individual questions are kept for the user to fill out but will not be included in the summary -->
+                    <div class="form-group">
+                        <label for="smart_specific">1. Specific: What exactly do you want to achieve?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>I want to improve my math grades.</em></span>
+                        <textarea id="smart_specific" name="smart_specific" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smart_measurable">2. Measurable: How will you measure your progress and know when you've achieved your goal?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>By increasing my math test scores from 75% to 85%.</em></span>
+                        <textarea id="smart_measurable" name="smart_measurable" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smart_achievable">3. Achievable: Is this goal attainable? What steps will you take to achieve it?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>Yes, by studying an extra hour each day and attending online tutoring sessions.</em></span>
+                        <textarea id="smart_achievable" name="smart_achievable" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smart_relevant">4. Relevant: Why is this goal important to you?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>Improving my math grade is essential for my college application and future career in engineering.</em></span>
+                        <textarea id="smart_relevant" name="smart_relevant" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smart_timebound">5. Time-bound: What is your deadline for achieving this goal?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>By the end of the semester, in three months.</em></span>
+                        <textarea id="smart_timebound" name="smart_timebound" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smart_goal_combined">6. Combine your answers to form your SMART goal:</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>I will improve my math test scores from 75% to 85% by studying an extra hour each day and attending online tutoring sessions, achieving this by the end of the semester in three months to strengthen my college application.</em></span>
+                        <textarea id="smart_goal_combined" name="smart_goal_combined" rows="4"></textarea>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button type="button" onclick="nextStep('smartgoal')">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 2: Reality -->
+            <div class="step" id="step-reality" style="display:none;">
+                <h2>Reality - Where are you now?</h2>
+                <p>The second step is to understand the current reality and gather information about your situation right now.</p>
+                <p><strong>Process:</strong> Reflect on your current circumstances. Be honest in your assessment without judging yourself.</p>
+                <form id="form-reality">
+                    <div class="form-group">
+                        <label for="reality1">What am I currently doing to accomplish this goal?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>I complete my homework but don't spend extra time reviewing the material.</em></span>
+                        <textarea id="reality1" name="reality1" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reality2">What factors are contributing to or slowing down my progress?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>Distractions at home and lack of motivation are slowing me down.</em></span>
+                        <textarea id="reality2" name="reality2" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reality3">What isn't working?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>Studying alone without a clear plan isn't improving my understanding.</em></span>
+                        <textarea id="reality3" name="reality3" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reality4">What have I already tried to address this situation?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>I've tried studying with friends, but we often get off-topic.</em></span>
+                        <textarea id="reality4" name="reality4" rows="3"></textarea>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button type="button" onclick="prevStep('reality')">Previous</button>
+                        <button type="button" onclick="nextStep('reality')">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Options -->
+            <div class="step" id="step-options" style="display:none;">
+                <h2>Options - What could you do to accomplish your goal?</h2>
+                <p>The third step is to explore potential options and strategies to achieve the goal.</p>
+                <p><strong>Process:</strong> Brainstorm various ideas and alternatives.</p>
+                <form id="form-options">
+                    <div class="form-group">
+                        <label for="options1">What are some possible ways I can achieve this goal?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>Attend online tutoring, join a study group, or use educational apps.</em></span>
+                        <textarea id="options1" name="options1" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="options2">What other options are available to me right now?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>Ask my teacher for extra help or find additional resources online.</em></span>
+                        <textarea id="options2" name="options2" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="options3">How have other people successfully addressed similar challenges that I'm facing?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>They set specific study times and use practice tests to improve.</em></span>
+                        <textarea id="options3" name="options3" rows="3"></textarea>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button type="button" onclick="prevStep('options')">Previous</button>
+                        <button type="button" onclick="nextStep('options')">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 4: Way Forward -->
+            <div class="step" id="step-wayforward" style="display:none;">
+                <h2>Way Forward - What will you do?</h2>
+                <p>The last step is to establish a clear plan of action and commit to moving forward.</p>
+                <p><strong>Process:</strong> Identify specific steps, priorities, and a timeline for implementing your chosen options.</p>
+                <form id="form-wayforward">
+                    <div class="form-group">
+                        <label for="wayforward1">Which options am I most committed to implementing?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>Attending online tutoring sessions and setting a daily study schedule.</em></span>
+                        <textarea id="wayforward1" name="wayforward1" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wayforward2">What specific actions will I take, and when?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>I will sign up for tutoring tonight and start my study schedule tomorrow.</em></span>
+                        <textarea id="wayforward2" name="wayforward2" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wayforward3">How am I going to stay accountable?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>I'll track my progress in a journal and check in weekly with my teacher.</em></span>
+                        <textarea id="wayforward3" name="wayforward3" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wayforward4">How will I overcome potential obstacles?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>By removing distractions during study time and staying motivated by remembering my goals.</em></span>
+                        <textarea id="wayforward4" name="wayforward4" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wayforward5">What can someone I trust like a family member or friend do to help me stay accountable?</label>
+                        <span class="example-label">Example:</span>
+                        <span class="example-text"><em>I'll ask my parents to check my study schedule and encourage me.</em></span>
+                        <textarea id="wayforward5" name="wayforward5" rows="3"></textarea>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button type="button" onclick="prevStep('wayforward')">Previous</button>
+                        <button type="button" onclick="finish()">Finish</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Summary -->
+            <div class="step" id="step-summary" style="display:none;">
+                <h2>Summary</h2>
+                <!-- Achievement Badge -->
+                <div id="achievement-badge" class="achievement" aria-label="Achievement Badge" tabindex="0">
+                    <img src="achievement.jpg" alt="Achievement Badge">
+                    <p>Congratulations, <span id="student-name-display"></span>! You've completed your goal-setting plan.</p>
+                </div>
+                <div id="summary-content" tabindex="0">
+                    <!-- The summary will be inserted here by JavaScript -->
+                </div>
+                <!-- Sharing Options -->
+                <div class="sharing-options">
+                    <button type="button" onclick="downloadSummary()">Download Summary</button>
+                    <button type="button" onclick="shareSummary()">Share via Email</button>
+                </div>
+                <!-- Calendar Options -->
+                <div class="calendar-options">
+                    <h3>Add Your Goal to Your Calendar:</h3>
+                    <button type="button" onclick="addToGoogleCalendar()">Add to Google Calendar</button>
+                    <button type="button" onclick="addToOutlookCalendar()">Add to Outlook Calendar</button>
+                    <button type="button" onclick="downloadICS()">Download ICS File</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" onclick="printSummary()">Print</button>
+                    <button type="button" onclick="restart()">Restart</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning to Learn: Personalized Learning Plan</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Learning to Learn: Create Your Personalized Learning Plan</h1>
+    </header>
+    <main>
+        <!-- Introductory Statement -->
+        <section id="intro">
+            <p>
+                This tool helps you reflect on key aspects of your learning and develop a practical, personalized plan to support your academic and personal growth. You’ll explore Why, When, Where, and How you learn, with the goal of creating a strategy tailored to your unique needs.
+            </p>
+            
+        </section>
+
+        <div id="step-container">
+            <!-- Steps will be dynamically injected here -->
+        </div>
+        <div id="navigation-buttons">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+    </main>
+
+    <!-- Summary Section -->
+    <div id="summary" class="hidden">
+        <div class="summary-container">
+            <h2>Your Personalized Learning Plan</h2>
+            <div class="summary-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-flag"></i>
+                        <h3>Why You Learn</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Top Three Reasons:</strong></p>
+                        <p id="summary-why"></p>
+                        <p><strong>Statement of Purpose:</strong></p>
+                        <p id="summary-purpose"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-clock"></i>
+                        <h3>When You Learn</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Most Productive Times:</strong></p>
+                        <p id="summary-when"></p>
+                        <p><strong>Typical Weekly Schedule:</strong></p>
+                        <p id="summary-schedule"></p>
+                        <p><strong>Plan Adjustments:</strong></p>
+                        <p id="summary-adjustments"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Where You Learn</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Preferred Locations:</strong></p>
+                        <p id="summary-where"></p>
+                        <p><strong>Identify Distractions:</strong></p>
+                        <p id="summary-distractions"></p>
+                        <p><strong>New Study Space:</strong></p>
+                        <p id="summary-new-space"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>How You Learn</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Preferred Learning Methods:</strong></p>
+                        <p id="summary-how-methods"></p>
+                        <p><strong>Develop a Strategy:</strong></p>
+                        <p id="summary-how-strategy"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <!-- New "Previous" Button -->
+                <button id="prev-summary-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                
+                <!-- Existing Buttons -->
+                <button id="print-btn"><i class="fas fa-print"></i> Print to PDF</button>
+                <button id="save-calendar-btn"><i class="fas fa-calendar-plus"></i> Save to Google Calendar</button>
+                <button id="download-ical-btn"><i class="fas fa-download"></i> Download iCal</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>

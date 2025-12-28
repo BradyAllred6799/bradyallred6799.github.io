@@ -1,0 +1,245 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for the content */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Step titles and headings */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Paragraph styles */
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* List styles for the intro page */
+#intro ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#intro ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+#intro p {
+    font-size: 1.1em;
+}
+
+/* General input and textarea styles */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Textarea styles for auto-resizing */
+textarea {
+    min-height: 50px; /* Optional minimum height */
+    max-height: none; /* Allow unlimited expansion */
+    overflow: hidden; /* Hide scrollbar */
+    resize: none;     /* Disable manual resizing */
+    line-height: 1.5;
+}
+
+/* Focus styles for inputs and buttons */
+input[type="text"]:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Bootstrap Primary Color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific styles for the delete heading button */
+.delete-heading-button {
+    background-color: #dc3545; /* Bootstrap Danger Color */
+}
+
+.delete-heading-button:hover {
+    background-color: #c82333;
+}
+
+/* Step sections visibility control */
+.step {
+    display: none; /* Hide all steps by default */
+}
+
+/* Show the intro page by default */
+#intro {
+    display: block;
+}
+
+/* Table styles for Step 2 T-Chart */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Border for table, th, and td elements */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Padding inside table cells */
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Styling the table header */
+th {
+    background-color: #f8f9fa; /* Light grey background */
+    font-weight: bold;
+}
+
+/* Specific container styling for the heading input fields */
+.heading-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.heading-input-group label {
+    margin-bottom: 5px;
+}
+
+/* Styling for the intro page */
+#intro {
+    text-align: center;
+}
+
+/* Answer display styles */
+.answer-display {
+    display: none;
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+/* Hide relate display div on screen */
+.relate-container .answer-display {
+    display: none;
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+/* When printing, hide textareas and show displays */
+@media print {
+    /* Ensure all steps are visible when printing */
+    .step {
+        display: block !important;
+    }
+
+    /* Hide textareas when printing */
+    textarea,
+    .answer-container textarea,
+    .relate-container textarea {
+        display: none;
+    }
+
+    .answer-display,
+    .relate-container .answer-display {
+        display: block;
+    }
+
+    /* Optional: Style the printed answers */
+    .answer-display,
+    .relate-container .answer-display {
+        font-size: 16px;
+        color: #000;
+    }
+
+    /* Optionally remove borders and background for a clean printout */
+    textarea, input[type="text"] {
+        border: none;
+        background: transparent;
+    }
+
+    /* Hide buttons during print */
+    button {
+        display: none;
+    }
+
+    /* Hide any elements that are not necessary in print */
+    #addHeadingButton,
+    .delete-heading-button {
+        display: none;
+    }
+
+    /* Adjust page margins for printing */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .heading-input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .heading-input-group .heading-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

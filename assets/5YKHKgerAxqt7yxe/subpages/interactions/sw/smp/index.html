@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Your Stress</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" 
+    rel="stylesheet"
+  >
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Manage Your Stress</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="instructions-heading">
+      <h2 id="instructions-heading">How to Use This Tool</h2>
+      <ol>
+        <li>Begin by listing the most stressful things in your life right now.</li>
+        <li>Review the three approaches to managing stress.</li>
+        <li>For each stressor, select one of the approaches and describe how you will apply it.</li>
+        <li>When you’re done, select "Print My Stress Management Plan" to review and print your plan.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="stressors-heading">
+      <h2 id="stressors-heading">Identify Your Stressors</h2>
+      <p>What are the most stressful things in your life right now? (e.g., pressures, worries, conflicts, responsibilities) Write each stressor on a new line.</p>
+      <textarea id="stressors-input" rows="6" placeholder="List one stressor per line..."></textarea>
+      <button id="save-stressors-btn">Save Stressors</button>
+    </section>
+
+    <section aria-labelledby="approaches-heading" id="approaches-section" hidden>
+      <h2 id="approaches-heading">Choose an Approach to Manage Each Stressor</h2>
+      <div class="dimensions-grid">
+        <button class="dimension-box" data-approach="Change Situation">
+          Change the Situation
+        </button>
+        <button class="dimension-box" data-approach="Change Perception">
+          Change My Perception
+        </button>
+        <button class="dimension-box" data-approach="Change Capacity">
+          Change My Capacity
+        </button>
+      </div>
+      <p>Select an approach to learn more and apply it to a stressor.</p>
+    </section>
+
+    <section aria-labelledby="print-heading">
+      <h2 id="print-heading">Print Your Stress Management Plan</h2>
+      <p>Once you've applied strategies to your stressors, select the button below to print your plan.</p>
+      <button id="print-plan-btn">Print My Stress Management Plan</button>
+    </section>
+  </main>
+
+  <!-- Dialog for Approaches -->
+  <dialog id="approach-dialog">
+    <h3 id="dialog-title"></h3>
+    <p id="dialog-description"></p>
+
+    <label for="stressor-select">Select a stressor to apply this approach:</label><br>
+    <select id="stressor-select"></select>
+    
+    <label for="dialog-input" style="margin-top:1em;display:block;">Describe how you will apply this approach to the selected stressor:</label>
+    <textarea id="dialog-input" rows="4"></textarea>
+
+    <div class="dialog-buttons">
+      <button type="button" id="save-close-btn">Save & Close</button>
+    </div>
+  </dialog>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

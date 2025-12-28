@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Your Self-Care Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Create Your Self-Care Plan</h1>
+  </header>
+
+  <main>
+    <!-- Instructions -->
+    <section aria-labelledby="instructions-heading">
+      <h2 id="instructions-heading">How to Use This Tool</h2>
+      <ol>
+        <li>Select a wellness dimension box.</li>
+        <li>Review the suggestions in the dialog that appears.</li>
+        <li>Click "Add Activity" to enter your activity description, date, and time.</li>
+        <li>When finished, choose "Save & Close".</li>
+        <li>Repeat for other dimensions as desired.</li>
+        <li>Select "Generate My Self-Care Plan" to print your custom plan.</li>
+        <li>Select "Add to Calendar" to download a single ICS file with all scheduled events.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Eight Dimensions of Wellness</h2>
+      <div class="dimensions-grid">
+        <button class="dimension-box" data-dimension="Emotional">Emotional</button>
+        <button class="dimension-box" data-dimension="Environmental">Environmental</button>
+        <button class="dimension-box" data-dimension="Financial">Financial</button>
+        <button class="dimension-box" data-dimension="Intellectual">Intellectual</button>
+        <button class="dimension-box" data-dimension="Occupational">Occupational</button>
+        <button class="dimension-box" data-dimension="Physical">Physical</button>
+        <button class="dimension-box" data-dimension="Social">Social</button>
+        <button class="dimension-box" data-dimension="Spiritual">Spiritual</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="generate-heading">
+      <h2 id="generate-heading">Finish & Print</h2>
+      <p>Once you've added your activities, choose the options below:</p>
+      <div id="buttons-container">
+        <button id="generate-plan-btn">Generate My Self-Care Plan</button>
+        <button id="add-to-calendar-btn">Add to Calendar</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Dialog for Dimensions -->
+  <dialog id="dimension-dialog">
+    <h3 id="dialog-title"></h3>
+    <p id="dialog-suggestions"></p>
+
+    <div id="activities-list"></div>
+    <button type="button" id="add-activity-btn" class="add-activity-btn">Add Activity</button>
+
+    <div class="dialog-buttons">
+      <button type="button" id="save-close-btn">Save & Close</button>
+    </div>
+  </dialog>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+</body>
+</html>

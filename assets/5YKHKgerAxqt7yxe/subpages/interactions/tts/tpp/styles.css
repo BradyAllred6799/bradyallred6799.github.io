@@ -1,0 +1,383 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: #f5f7fa;
+    color: #2d3b45; /* Default text color set to dark gray-blue */
+}
+
+header {
+    background-color: #f08047; /* Updated Accent Color */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #000000; /* Black text for high contrast */
+    margin: 0;
+    font-weight: 700;
+}
+
+#form-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #2d3b45; /* Changed from #f08047 to dark gray-blue for better contrast */
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+p {
+    line-height: 1.6;
+    color: #2d3b45; /* Ensuring text is dark gray-blue */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #2d3b45; /* Ensuring label text is dark gray-blue */
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccd1d9; /* Light gray border for better visibility */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    color: #2d3b45; /* Dark gray-blue text */
+    background-color: #ffffff; /* White background for inputs */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.form-group select::placeholder {
+    color: #6b7c88; /* Darker placeholder text for better contrast */
+    opacity: 1; /* Ensures full opacity for placeholder text */
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #f08047; /* Updated Primary Color */
+    outline: none;
+}
+
+.button-group {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #000000; /* Black text for high contrast */
+    background-color: #f08047; /* Updated Primary Color */
+}
+
+.button-group button:hover {
+    background-color: #c06038; /* Darker shade for hover, maintaining contrast */
+}
+
+.button-group button:focus {
+    outline: 2px solid #005fcc; /* High-contrast focus outline */
+    outline-offset: 2px;
+}
+
+.btn-next {
+    background-color: #f08047; /* Updated Primary Color */
+    color: #000000; /* Black text for high contrast */
+}
+
+.btn-next:hover {
+    background-color: #c06038; /* Darker shade for hover, maintaining contrast */
+}
+
+.btn-back {
+    background-color: #f08047; /* Updated Accent Color */
+    color: #000000; /* Black text for high contrast */
+    margin-right: 10px;
+}
+
+.btn-back:hover {
+    background-color: #c06038; /* Darker shade for hover */
+}
+
+.btn-download {
+    background-color: #f08047; /* Using Accent Color for consistency */
+    color: #000000; /* Black text for high contrast */
+}
+
+.btn-download:hover {
+    background-color: #c06038; /* Darker shade for hover */
+}
+
+.btn-finish {
+    background-color: #f08047; /* Using Accent Color */
+    color: #000000; /* Black text for high contrast */
+}
+
+.btn-finish:hover {
+    background-color: #c06038; /* Darker shade for hover */
+}
+
+/* Add styles for Google and Outlook buttons */
+.btn-google {
+    background-color: #f08047; /* Updated Primary Color */
+    color: #000000; /* Black text for high contrast */
+}
+
+.btn-google:hover {
+    background-color: #c06038; /* Darker shade for hover */
+}
+
+.btn-outlook {
+    background-color: #f08047; /* Updated Primary Color */
+    color: #000000; /* Black text for high contrast */
+}
+
+.btn-outlook:hover {
+    background-color: #c06038; /* Darker shade for hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(240, 128, 71, 0.9); /* Accent Color with opacity */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 60px auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    color: #2d3b45; /* Dark gray-blue for visibility */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #c0392b; /* Darker shade on hover */
+}
+
+#test-plan-content h1,
+#test-plan-content h2,
+#test-plan-content h3 {
+    color: #2d3b45; /* Changed from #f08047 to dark gray-blue for better contrast */
+    margin-top: 0;
+}
+
+#test-plan-content p {
+    line-height: 1.6;
+    color: #2d3b45; /* Ensuring text is dark gray-blue */
+}
+
+#test-plan-content hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #bdc3c7; /* Light gray for separation */
+}
+
+#test-plan-content button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f08047; /* Updated Accent Color */
+    color: #000000; /* Black text for contrast */
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#test-plan-content button:hover {
+    background-color: #c06038; /* Darker shade for hover */
+}
+
+/* New Technique Modal Styles */
+#technique-content h3 {
+    margin-top: 0;
+    color: #2d3b45;
+}
+
+#technique-content p,
+#technique-content ul {
+    line-height: 1.6;
+    color: #2d3b45;
+}
+
+#technique-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Progress Bar Styles */
+#progress-bar {
+    background-color: #f5f7fa;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#progress {
+    background-color: #f08047; /* Updated Primary Color */
+    height: 10px;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #form-container {
+        padding: 20px;
+    }
+
+    .button-group {
+        text-align: center;
+    }
+
+    .button-group button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Make the techniques table responsive */
+    #techniques-table, #techniques-table th, #techniques-table td {
+        display: block;
+    }
+
+    #techniques-table th {
+        background-color: #f08047;
+        color: #ffffff;
+        padding: 10px;
+        text-align: left;
+    }
+
+    #techniques-table td {
+        padding: 10px;
+        border-bottom: 1px solid #ccd1d9;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #test-plan-content, #test-plan-content * {
+        visibility: visible;
+    }
+    #test-plan-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
+    }
+    .close-button {
+        display: none;
+    }
+}
+
+/* Additional Styles for dynamic content */
+.topic-schedule {
+    margin-bottom: 30px;
+}
+
+.topic-schedule h3 {
+    margin-bottom: 10px;
+    color: #2d3b45;
+}
+
+/* Ensure all text is either dark gray-blue or black */
+body, p, label, h1, h2, h3, h4, h5, h6, .form-group input, .form-group textarea, .form-group select {
+    color: #2d3b45; 
+}
+
+/* Format tips container styling (optional overrides) */
+#format-tips h3 {
+    color: #2d3b45;
+    margin-top: 0;
+}
+
+#format-tips ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Techniques Table Styles */
+#techniques-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#techniques-table th, #techniques-table td {
+    border: 1px solid #ccd1d9;
+    padding: 12px;
+    text-align: left;
+}
+
+#techniques-table th {
+    background-color: #f08047;
+    color: #ffffff;
+}
+
+#techniques-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#techniques-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.technique-link {
+    color: #f08047;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.technique-link:hover {
+    text-decoration: underline;
+}

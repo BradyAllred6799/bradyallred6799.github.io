@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainstorming Tool</title>
+    <!-- Link to Google Fonts for Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Brainstorm Your Topic</h1>
+        <p>Use the tool below to organize your thoughts and questions effectively.</p>
+        <!-- Buttons Container -->
+        <div class="header-buttons">
+            <button id="print-button" class="print-button">Print Lists</button>
+            <button id="instructions-button" class="instructions-button">Instructions</button>
+        </div>
+        <!-- Optional Diagram Image -->
+        <!--
+        <img src="brainstorm-diagram.png" alt="Brainstorm Diagram" class="diagram">
+        -->
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Lists Container -->
+        <section class="lists-container">
+            <!-- Things You Know Section -->
+            <section class="list-section" id="known-section">
+                <h2>Things You Know</h2>
+                <ul id="known-list">
+                    <!-- List items will appear here -->
+                </ul>
+                <div class="input-group">
+                    <input type="text" id="known-input" placeholder="Add something you know" aria-label="Add something you know">
+                    <button id="add-known" class="add-button">Add</button>
+                </div>
+            </section>
+
+            <!-- Things You Want to Know Section -->
+            <section class="list-section" id="want-to-know-section">
+                <h2>Things You Want to Know</h2>
+                <ul id="want-to-know-list">
+                    <!-- List items will appear here -->
+                </ul>
+                <div class="input-group">
+                    <input type="text" id="want-to-know-input" placeholder="Add something you want to know" aria-label="Add something you want to know">
+                    <button id="add-want-to-know" class="add-button">Add</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Happy Brainstorming!</p>
+    </footer>
+
+    <!-- Modal for Guiding Questions -->
+    <div id="guiding-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="guiding-modal-title">
+        <div class="modal-content">
+            <button id="guiding-close-button" class="close-button" aria-label="Close Guiding Questions Modal">&times;</button>
+            <h2 id="guiding-modal-title">Guiding Questions</h2>
+            <form id="guiding-questions-form">
+                <!-- Dynamically injected guiding questions will go here -->
+                <div id="guiding-questions-container"></div>
+                <button type="submit" class="submit-button">Save Answers</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Instructions -->
+    <div id="instructions-modal" class="instructions-modal" role="dialog" aria-modal="true" aria-labelledby="instructions-modal-title">
+        <div class="modal-content">
+            <button id="instructions-close-button" class="close-button" aria-label="Close Instructions Modal">&times;</button>
+            <h2 id="instructions-modal-title">How to Use This Tool</h2>
+            <ol>
+                <li><strong>List What You Know:</strong> Start by listing all the information you already have about your topic. This helps establish a foundation for your brainstorming session.</li>
+                <li><strong>List What You Want to Know:</strong> Identify areas where you need more information or have questions. This guides your research and exploration.</li>
+                <li><strong>Add Items:</strong> Use the input fields under each list to add your points. Press the "Add" button or hit "Enter" to include them in the respective list.</li>
+                <li><strong>Answer Guiding Questions:</strong> After adding an item, a prompt will appear asking you to answer guiding questions related to that item.</li>
+                <li><strong>Edit Your Lists:</strong> Remove any items that are no longer relevant by clicking the "✖" button next to each list item.</li>
+            </ol>
+            <p>Remember, the goal is to generate as many ideas as possible to help you develop a well-rounded perspective on your topic.</p>
+        </div>
+    </div>
+
+    <!-- Link to External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

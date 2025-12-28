@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Breakdown</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>My Tasks</h1>
+  </header>
+
+  <!-- Main/Home Page Content -->
+  <div id="homePage">
+    <!-- Buttons at the top: Add Task and Print All Tasks -->
+    <div class="button-group">
+      <button class="btn" id="addTaskBtn">Add Task</button>
+      <button class="btn" id="printBtn">Print All Tasks</button>
+    </div>
+
+    <!-- Task List Container -->
+    <ul id="taskList" class="task-list">
+      <!-- Populated by script.js -->
+    </ul>
+  </div>
+
+  <!-- Task Modal (Dialog) -->
+  <div id="taskModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <span class="close-button" id="closeModalBtn" aria-label="Close modal">&times;</span>
+      <h2 id="modalTitle">Add / Edit Task</h2>
+
+      <!-- Task Name -->
+      <div class="form-group">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" placeholder="Enter task name..." required />
+      </div>
+
+      <!-- Steps Section -->
+      <h3>Steps</h3>
+      <ul id="stepsList" class="steps-list"></ul>
+      <div class="form-group step-adder">
+        <input type="text" id="newStepInput" placeholder="Enter a step..." />
+        <button class="btn" id="addStepBtn">Add Step</button>
+      </div>
+
+      <!-- Error Display -->
+      <div id="modalError" class="error-message"></div>
+
+      <!-- Save Button -->
+      <div class="button-group">
+        <button class="btn" id="saveTaskBtn">Save Breakdown</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div id="modalOverlay" class="modal-overlay hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 432.27 432.27"><defs><style>.cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        fill: #fff;
+        opacity: .9;
+        stroke: #041189;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }</style><linearGradient id="linear-gradient" x1="-2305.81" y1="243.23" x2="-2246.96" y2="192.6" gradientTransform="translate(6544.37 763.85) scale(2.81 -2.84)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a9fd4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="linear-gradient-2" x1="-2224.22" y1="161.96" x2="-2245.23" y2="191.69" gradientTransform="translate(6544.37 763.85) scale(2.81 -2.84)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd43b"/><stop offset="1" stop-color="#ffe873"/></linearGradient></defs><g id="Layer_1-2" data-name="Layer 1"><g><rect class="cls-3" x="2.5" y="2.5" width="427.27" height="427.27" rx="12" ry="12"/><g><path class="cls-2" d="M214.35,64.48c-12.37.06-24.18,1.11-34.58,2.95-30.62,5.41-36.18,16.73-36.18,37.61v27.58h72.36v9.19h-99.52c-21.03,0-39.44,12.64-45.2,36.69-6.64,27.56-6.94,44.76,0,73.54,5.14,21.42,17.43,36.69,38.46,36.69h24.88v-33.06c0-23.88,20.66-44.95,45.2-44.95h72.28c20.12,0,36.18-16.57,36.18-36.77v-68.9c0-19.61-16.54-34.34-36.18-37.61-12.43-2.07-25.33-3.01-37.7-2.95ZM175.22,86.66c7.47,0,13.58,6.2,13.58,13.83,0,7.6-6.1,13.75-13.58,13.75-7.5,0-13.58-6.15-13.58-13.75s6.08-13.83,13.58-13.83Z"/><path class="cls-1" d="M297.25,141.82v32.13c0,24.91-21.12,45.88-45.2,45.88h-72.28c-19.8,0-36.18,16.94-36.18,36.77v68.9c0,19.61,17.05,31.14,36.18,36.77,22.91,6.74,44.87,7.95,72.28,0,18.22-5.27,36.18-15.89,36.18-36.77v-27.58h-72.28v-9.19h108.46c21.03,0,28.87-14.67,36.18-36.69,7.55-22.67,7.23-44.46,0-73.54-5.2-20.94-15.12-36.69-36.18-36.69h-27.16ZM256.6,316.31c7.5,0,13.58,6.15,13.58,13.75s-6.08,13.83-13.58,13.83-13.58-6.2-13.58-13.83,6.1-13.75,13.58-13.75Z"/></g></g></g></svg>
